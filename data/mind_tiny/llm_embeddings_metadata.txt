@@ -1,0 +1,4 @@
+Model: text-embedding-3-small
+Embedding dimension: 1536
+Number of news: 500
+Shape: (500, 1536)

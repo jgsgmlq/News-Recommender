@@ -1,0 +1,4 @@
+Model: text-embedding-3-small
+Embedding dimension: 1536
+Number of news: 51282
+Shape: (51282, 1536)

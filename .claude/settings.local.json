@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(dir:*)",
+      "Bash(cat:*)",
+      "Bash(timeout 120 sleep:*)",
+      "Bash(timeout 10 sleep:*)",
+      "Bash(timeout 15 sleep:*)",
+      "Bash(timeout 5 sleep:*)",
+      "Bash(timeout 30 sleep:*)",
+      "Bash(timeout 180 sleep:*)",
+      "Bash(findstr:*)",
+      "Bash(tasklist:*)",
+      "Bash(timeout 60 sleep:*)",
+      "Bash(nvidia-smi:*)",
+      "Bash(pip uninstall:*)",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(netstat:*)",
+      "Bash(git config:*)",
+      "Bash(curl -v https://github.com)",
+      "Bash(git rm:*)",
+      "Bash(git checkout:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

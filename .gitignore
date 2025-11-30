@@ -1,0 +1,105 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyTorch
+*.pth
+*.pt
+*.ckpt
+
+# Data files (大文件不上传)
+data/mind_small/train/
+data/mind_small/valid/
+data/mind_tiny/train/
+data/mind_tiny/valid/
+*.tsv
+*.vec
+*.npy
+*.npz
+*.pkl
+*.pickle
+
+# Output files
+output/*/best_model.pth
+output/*/runs/
+output/*/*.pth
+*.log
+
+# TensorBoard
+runs/
+logs/
+
+# Environment variables
+.env
+.env.local
+*.key
+*_key.txt
+
+# API Keys (防止泄露)
+*api_key*
+*API_KEY*
+credentials.json
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Cache
+.cache/
+*.cache
+
+# 保留示例配置文件
+!example.env
+!sample_data/
+
+# 保留小型测试数据
+!data/mind_tiny/news.tsv
+!data/mind_tiny/behaviors.tsv
