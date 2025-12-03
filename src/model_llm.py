@@ -5,7 +5,20 @@ Integrates: ID Embeddings + LLM Text Embeddings + GNN Entity Embeddings
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from gnn_module import NewsEntityGNN
+
+# 尝试导入GNN模块（如果不存在则跳过）
+try:
+    from .gnn_module import NewsEntityGNN
+except ImportError:
+    try:
+        from gnn_module import NewsEntityGNN
+    except ImportError:
+        # GNN模块不可用，创建一个占位类
+        class NewsEntityGNN(nn.Module):
+            def __init__(self, *args, **kwargs):
+                super().__init__()
+            def forward(self, x, edge_index):
+                return x
 
 
 class MultiModalNewsEncoder(nn.Module):

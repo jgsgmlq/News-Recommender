@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻推荐系统 - AI Guide Course Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <!-- 头部 -->
+    <header class="header">
+        <div class="container">
+            <h1>📰 智能新闻推荐系统</h1>
+            <p class="subtitle">Multi-Modal News Recommendation with LLM + GNN + ID Embeddings</p>
+            <div class="course-info">
+                <span class="badge">AI Guide Course Project</span>
+                <span class="badge">PyTorch</span>
+                <span class="badge">Transformer</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="container">
+        <!-- 统计信息卡片 -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-value" id="totalNews">-</div>
+                    <div class="stat-label">新闻总数</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-value" id="totalUsers">-</div>
+                    <div class="stat-label">用户总数</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🤖</div>
+                    <div class="stat-value" id="modelStatus">-</div>
+                    <div class="stat-label">模型状态</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-value">11.8%</div>
+                    <div class="stat-label">AUC 提升</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 用户选择区 -->
+        <section class="user-section">
+            <h2>🔍 选择用户</h2>
+            <div class="user-selector">
+                <select id="userSelect" class="user-select">
+                    <option value="">-- 请选择用户 --</option>
+                </select>
+                <button id="recommendBtn" class="btn btn-primary" disabled>
+                    生成推荐
+                </button>
+            </div>
+        </section>
+
+        <!-- 两列布局 -->
+        <div class="two-column">
+            <!-- 左侧：用户历史 -->
+            <section class="history-section">
+                <h2>📖 用户历史点击</h2>
+                <div id="userHistory" class="history-list">
+                    <div class="empty-state">
+                        <p>👈 请先选择用户</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 右侧：推荐结果 -->
+            <section class="recommend-section">
+                <h2>🎯 推荐新闻</h2>
+                <div id="recommendations" class="recommend-list">
+                    <div class="empty-state">
+                        <p>点击"生成推荐"按钮查看结果</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 模态框：推荐详情 -->
+        <div id="detailModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle">新闻详情</h2>
+
+                <div class="detail-grid">
+                    <div class="detail-section">
+                        <h3>📰 新闻信息</h3>
+                        <div id="newsInfo"></div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>🎨 注意力权重分布</h3>
+                        <div class="chart-container">
+                            <canvas id="attentionChart"></canvas>
+                        </div>
+                        <div id="attentionExplanation" class="explanation"></div>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <h3>💡 推荐原因</h3>
+                    <div id="recommendReason" class="reason-text"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 AI Guide Course Project | Multi-Modal News Recommendation System</p>
+            <p class="tech-stack">
+                Tech Stack: PyTorch + Flask + OpenAI API + GraphSAGE
+            </p>
+        </div>
+    </footer>
+
+    <!-- Loading覆盖层 -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>正在生成推荐...</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

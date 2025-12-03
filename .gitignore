@@ -103,3 +103,10 @@ Thumbs.db
 # 保留小型测试数据
 !data/mind_tiny/news.tsv
 !data/mind_tiny/behaviors.tsv
+
+# Claude设置（本地配置）
+.claude/settings.local.json
+
+# 临时文件
+nul
+visualize_attention.py
