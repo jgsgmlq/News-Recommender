@@ -78,7 +78,7 @@
 
 ---
 
-### [ATTENTION_MECHANISM_EXPLAINED.md](ATTENTION_MECHANISM_EXPLAINED.md)
+### 📗[ATTENTION_MECHANISM_EXPLAINED.md](ATTENTION_MECHANISM_EXPLAINED.md)
 **自适应注意力门控机制详解**
 
 内容:
@@ -94,7 +94,7 @@
 
 ---
 
-### [fusion_comparison.md](fusion_comparison.md)
+### 📕[fusion_comparison.md](fusion_comparison.md)
 **多模态融合方法对比**
 
 内容：
@@ -106,7 +106,7 @@
 
 ---
 
-### [INCREMENTAL_UPDATE_STRATEGY.md](INCREMENTAL_UPDATE_STRATEGY.md)
+### 📙[INCREMENTAL_UPDATE_STRATEGY.md](INCREMENTAL_UPDATE_STRATEGY.md)
 **增量更新策略：新数据场景分析**
 
 内容：
