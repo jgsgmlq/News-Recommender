@@ -118,7 +118,7 @@ News-Recommender/
 
 ## 更新日志
 
-- **2025-01-XX**: 整理文档结构,将技术文档移至docs/
+- **2025-11-28**: 整理文档结构,将技术文档移至docs/
 - **2025-11-29**: 完成TRAINING_REPORT.md,记录sigmoid饱和问题解决过程
 - **2025-11-29**: 完成LLM_EMBEDDING_PROPOSAL.md技术方案
 - **2025-11-29**: 完成GNN_README.md,验证GNN模块
@@ -136,4 +136,4 @@ News-Recommender/
 ---
 
 **文档维护**: Skyler Wang
-**最后更新**: 2025-12-01
+**最后更新**: 2025-12-03
