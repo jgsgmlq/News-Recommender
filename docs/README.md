@@ -78,6 +78,46 @@
 
 ---
 
+### 📗[ATTENTION_MECHANISM_EXPLAINED.md](ATTENTION_MECHANISM_EXPLAINED.md)
+**自适应注意力门控机制详解**
+
+内容:
+- 什么是自适应注意力门控？
+- 数学原理
+- 代码实现详解
+- 与其他融合方法的对比
+- 自适应能力体现
+- 为什么Attention方法效果最好
+- 核心代码位置索引
+
+适合：想了解本项目所采用自适应注意力门控机制基本原理的读者
+
+---
+
+### 📕[fusion_comparison.md](fusion_comparison.md)
+**多模态融合方法对比**
+
+内容：
+- 简单拼接（Concat）
+- 门控融合（Gate）
+- 自适应注意力门控（Attention）⭐
+
+适合：想了解本项目所采用自适应注意力门控机制基本原理的读者
+
+---
+
+### 📙[INCREMENTAL_UPDATE_STRATEGY.md](INCREMENTAL_UPDATE_STRATEGY.md)
+**增量更新策略：新数据场景分析**
+
+内容：
+- 当前架构分析
+- 三种场景详细分析
+- 完整更新策略总结
+- 代码实现示例
+- 最佳实践建议
+
+  适合：想后期进行模型更新的用户
+
 ## 文档使用建议
 
 ### 如果你是...
@@ -118,7 +158,7 @@ News-Recommender/
 
 ## 更新日志
 
-- **2025-01-XX**: 整理文档结构,将技术文档移至docs/
+- **2025-11-28**: 整理文档结构,将技术文档移至docs/
 - **2025-11-29**: 完成TRAINING_REPORT.md,记录sigmoid饱和问题解决过程
 - **2025-11-29**: 完成LLM_EMBEDDING_PROPOSAL.md技术方案
 - **2025-11-29**: 完成GNN_README.md,验证GNN模块
@@ -136,4 +176,4 @@ News-Recommender/
 ---
 
 **文档维护**: Skyler Wang
-**最后更新**: 2025-12-01
+**最后更新**: 2025-12-03
